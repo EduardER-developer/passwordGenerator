@@ -20,14 +20,18 @@ func main()  {
 		fmt.Println("Вы ввели длину 0. Введите более 1")
 		os.Exit(0)
 	}
-
-	r, _ := rand.Int(rand.Reader, big.NewInt(10))
-
 	// slice[1] = int(r.Int64())
 
-	for i := 0; size <= len(slice)-1; i++ {
+	// if (size == len(slice)){
+	// 	fmt.Printf("успешно")
+	// }
+
+	for i := 0; len(slice) > i; i++ {
+		r, _ := rand.Int(rand.Reader, big.NewInt(10))
 		slice[i] = int(r.Int64())
 	}
 
-	fmt.Println(slice)
+	for _, v := range slice {
+		fmt.Print(v) 
+	}
 }
