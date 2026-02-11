@@ -8,10 +8,8 @@ import(
 )
 
 func main()  {
-	// password := 0
 	size := 0
-	// var lenghtPassword []int
-
+	
 	fmt.Println("Какая длина пароля? Введите:")
 	fmt.Scanln(&size)
 
@@ -24,9 +22,9 @@ func main()  {
 	for i := 0; len(slice) > i; i++ {
 		x, _ := rand.Int(rand.Reader, big.NewInt(5347852498))	
 
-
 		if x.Int64() % 2 == 0 {
-			r, _ := rand.Int(rand.Reader, big.NewInt(10))	
+			r, _ := rand.Int(rand.Reader, big.NewInt(10))
+
 			slice[i] = int(r.Int64())
 		} else {
 			t, _ := rand.Int(rand.Reader, big.NewInt(94))		
@@ -41,7 +39,5 @@ func main()  {
 			ch := rune(v)
 			fmt.Printf("%c", ch)
 		}
-	}
-
-	
+	}	
 }
